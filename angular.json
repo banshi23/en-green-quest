@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "carbon-credit-website": {
+    "en-green-quest": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -27,7 +27,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/carbon-credit-website",
+            "outputPath": "dist/en-green-quest",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "carbon-credit-website:build:production"
+              "buildTarget": "en-green-quest:build:production"
             },
             "development": {
-              "buildTarget": "carbon-credit-website:build:development"
+              "buildTarget": "en-green-quest:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "carbon-credit-website:build"
+            "buildTarget": "en-green-quest:build"
           }
         },
         "test": {
