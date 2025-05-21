@@ -1,0 +1,16 @@
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
+    &.dark-theme {
+      background-color: var(--dark-bg);
+      color: var(--dark-text);
+    }
+  }
+  
+  .main-content {
+    flex: 1;
+    padding-top: 76px; // Account for fixed header
+  }

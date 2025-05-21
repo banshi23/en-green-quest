@@ -1,0 +1,21 @@
+<header class="header" [ngClass]="{'scrolled': isScrolled}">
+    <div class="container">
+      <a routerLink="/" class="logo">
+        <span class="logo-text">EnGreenQuest</span>
+      </a>
+      
+      <button class="mobile-menu-toggle" (click)="toggleMobileMenu()" aria-label="Toggle Menu">
+        <span [ngClass]="{'open': isMobileMenuOpen}"></span>
+      </button>
+      
+      <nav class="nav-menu" [ngClass]="{'open': isMobileMenuOpen}">
+        <ul>
+          <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+          <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+          <li><a routerLink="/services" routerLinkActive="active">Services</a></li>
+          <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+        </ul>
+        <app-dark-mode-toggle></app-dark-mode-toggle>
+      </nav>
+    </div>
+  </header>

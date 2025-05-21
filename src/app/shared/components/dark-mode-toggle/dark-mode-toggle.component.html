@@ -1,0 +1,10 @@
+<button 
+      class="dark-mode-toggle" 
+      [ngClass]="{'dark': isDarkMode}" 
+      (click)="toggleDarkMode()" 
+      aria-label="Toggle Dark Mode">
+      <span class="icon">
+        <i [class]="isDarkMode ? 'fas fa-sun' : 'fas fa-moon'"></i>
+      </span>
+      <span class="text">{{ isDarkMode ? 'Light' : 'Dark' }}</span>
+    </button>

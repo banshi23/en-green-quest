@@ -1,0 +1,169 @@
+<section class="page-header">
+    <div class="container">
+      <h1>Our Services</h1>
+      <p>Comprehensive carbon management solutions for your organization</p>
+    </div>
+  </section>
+  
+  <section class="services-overview">
+    <div class="container">
+      <div class="overview-content">
+        <h2>How We <span class="highlight">Help</span></h2>
+        <p>
+          At EnGreenQuest, we offer end-to-end solutions to help businesses understand, 
+          reduce, and offset their carbon footprint. Our approach combines rigorous measurement, 
+          strategic planning, and verified carbon credits to create meaningful environmental impact 
+          while delivering business value.
+        </p>
+        <a routerLink="/contact" class="btn btn-primary">Request a Consultation</a>
+      </div>
+    </div>
+  </section>
+  
+  <section class="service-cards">
+    <div class="container">
+      <div class="services-grid">
+        <div class="service-card" *ngFor="let service of services">
+          <div class="service-icon">
+            <i [class]="service.icon"></i>
+          </div>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.description }}</p>
+          <ul class="service-features">
+            <li *ngFor="let feature of service.features">{{ feature }}</li>
+          </ul>
+          <a routerLink="/contact" class="btn btn-outline">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured <span class="highlight">Projects</span></h2>
+        <p>Carbon offset initiatives we support around the world</p>
+      </div>
+      
+      <div class="projects-grid">
+        <div class="project-card" *ngFor="let project of projects">
+          <div class="project-image">
+            <img [src]="project.image" [alt]="project.title" />
+          </div>
+          <div class="project-content">
+            <h3>{{ project.title }}</h3>
+            <p class="project-location"><i class="fas fa-map-marker-alt"></i> {{ project.location }}</p>
+            <p class="project-description">{{ project.description }}</p>
+            <div class="project-stats">
+              <div class="stat">
+                <span class="stat-value">{{ project.carbonOffset }}</span>
+                <span class="stat-label">CO₂ Offset</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">{{ project.area }}</span>
+                <span class="stat-label">Area</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="process">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our <span class="highlight">Process</span></h2>
+        <p>How we work with you to achieve your sustainability goals</p>
+      </div>
+      
+      <div class="process-steps">
+        <div class="process-step" *ngFor="let step of process; let i = index">
+          <div class="step-number">{{ i + 1 }}</div>
+          <div class="step-content">
+            <h3>{{ step.title }}</h3>
+            <p>{{ step.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="certifications">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our <span class="highlight">Certifications</span></h2>
+        <p>We adhere to the highest industry standards</p>
+      </div>
+      
+      <div class="certifications-grid">
+        <div class="certification-card" *ngFor="let certification of certifications">
+          <div class="certification-image">
+            <img [src]="certification.logo" [alt]="certification.name" />
+          </div>
+          <h3>{{ certification.name }}</h3>
+          <p>{{ certification.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2>Client <span class="highlight">Testimonials</span></h2>
+        <p>What our clients say about working with us</p>
+      </div>
+      
+      <div class="testimonials-carousel">
+        <div class="testimonial-card" *ngFor="let testimonial of testimonials">
+          <div class="testimonial-content">
+            <div class="quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="quote">{{ testimonial.quote }}</p>
+            <div class="client">
+              <div class="client-image">
+                <img [src]="testimonial.image" [alt]="testimonial.name" />
+              </div>
+              <div class="client-info">
+                <h4>{{ testimonial.name }}</h4>
+                <p>{{ testimonial.title }}, {{ testimonial.company }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently Asked <span class="highlight">Questions</span></h2>
+        <p>Answers to common questions about our services</p>
+      </div>
+      
+      <div class="faq-grid">
+        <div class="faq-item" *ngFor="let faq of faqs; let i = index">
+          <div class="faq-question" (click)="toggleFaq(i)">
+            <h3>{{ faq.question }}</h3>
+            <i class="fas" [ngClass]="faq.open ? 'fa-minus' : 'fa-plus'"></i>
+          </div>
+          <div class="faq-answer" [ngClass]="{'open': faq.open}">
+            <p>{{ faq.answer }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Start Your Carbon Neutral Journey?</h2>
+        <p>Contact us today to discuss how we can help your organization achieve its sustainability goals.</p>
+        <a routerLink="/contact" class="btn btn-primary">Get in Touch</a>
+      </div>
+    </div>
+  </section>

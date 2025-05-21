@@ -1,0 +1,33 @@
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    
+    &:hover {
+      background-color: var(--hover-bg);
+    }
+    
+    &.dark {
+      background-color: var(--primary-dark);
+      color: white;
+      
+      &:hover {
+        background-color: var(--primary-color);
+      }
+    }
+    
+    .icon {
+      margin-right: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .dark-mode-toggle {
+      margin-top: 1rem;
+    }
+  }

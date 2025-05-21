@@ -1,0 +1,78 @@
+<section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="animate-in">Transform Your <span class="highlight">Environmental Impact</span></h1>
+        <p class="animate-in">Offset your carbon footprint through verified carbon credits and contribute to a sustainable future.</p>
+        <div class="cta-buttons animate-in">
+          <a routerLink="/services" class="btn btn-primary">Explore Solutions</a>
+          <a routerLink="/contact" class="btn btn-outline">Get Started</a>
+        </div>
+      </div>
+      <div class="hero-image animate-in">
+        <img src="assets/images/hero-image.jpg" alt="Sustainable Earth" />
+      </div>
+    </div>
+    <div class="scroll-indicator" (click)="scrollToSection('features')">
+      <span>Scroll Down</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+  
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Choose <span class="highlight">EnGreenQuest</span>?</h2>
+        <p>We provide transparent, verified solutions to help your business reach its sustainability goals.</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card" *ngFor="let feature of features; let i = index">
+          <div class="feature-icon">
+            <i [class]="feature.icon"></i>
+          </div>
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item" *ngFor="let stat of stats">
+          <div class="stat-number">{{ stat.value }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="process">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our <span class="highlight">Process</span></h2>
+        <p>Simple steps to carbon neutrality for your organization</p>
+      </div>
+      
+      <div class="process-steps">
+        <div class="process-step" *ngFor="let step of process; let i = index">
+          <div class="step-number">{{ i + 1 }}</div>
+          <div class="step-content">
+            <h3>{{ step.title }}</h3>
+            <p>{{ step.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Reduce Your Carbon Footprint?</h2>
+        <p>Join hundreds of businesses already on their journey to carbon neutrality.</p>
+        <a routerLink="/contact" class="btn btn-primary">Contact Us Today</a>
+      </div>
+    </div>
+  </section>

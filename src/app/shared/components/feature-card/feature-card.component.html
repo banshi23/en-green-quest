@@ -1,0 +1,8 @@
+<div class="feature-card" [ngClass]="variant">
+    <div class="card-icon" *ngIf="icon">
+      <i [class]="icon"></i>
+    </div>
+    <h3>{{ title }}</h3>
+    <p>{{ description }}</p>
+    <ng-content></ng-content>
+  </div>

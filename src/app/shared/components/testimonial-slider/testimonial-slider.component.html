@@ -1,0 +1,55 @@
+<div class="testimonial-slider">
+    <div class="slider-container" #sliderContainer>
+      <div 
+        *ngFor="let testimonial of testimonials; let i = index" 
+        class="testimonial-slide"
+        [ngClass]="{'active': currentSlide === i}"
+      >
+        <div class="testimonial-content">
+          <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p class="quote">{{ testimonial.quote }}</p>
+          <div class="client">
+            <div class="client-image">
+              <img [src]="testimonial.image" [alt]="testimonial.name" />
+            </div>
+            <div class="client-info">
+              <h4>{{ testimonial.name }}</h4>
+              <p>{{ testimonial.title }}, {{ testimonial.company }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="slider-controls">
+      <button 
+        class="control-prev" 
+        (click)="prevSlide()" 
+        [disabled]="currentSlide === 0"
+        aria-label="Previous testimonial"
+      >
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      
+      <div class="slider-dots">
+        <button 
+          *ngFor="let dot of dots; let i = index" 
+          class="dot" 
+          [ngClass]="{'active': currentSlide === i}"
+          (click)="goToSlide(i)"
+          [attr.aria-label]="'Go to testimonial ' + (i + 1)"
+        ></button>
+      </div>
+      
+      <button 
+        class="control-next" 
+        (click)="nextSlide()" 
+        [disabled]="currentSlide === testimonials.length - 1"
+        aria-label="Next testimonial"
+      >
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>

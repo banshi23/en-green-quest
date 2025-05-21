@@ -1,0 +1,41 @@
+.section-title {
+    margin-bottom: 3rem;
+    
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      
+      .highlight {
+        color: var(--primary-color);
+      }
+    }
+    
+    p {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 700px;
+    }
+    
+    &.text-center {
+      text-align: center;
+      
+      p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .title-underline {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    
+    .title-underline {
+      height: 4px;
+      width: 80px;
+      background-color: var(--primary-color);
+      margin-top: 1.5rem;
+      border-radius: 2px;
+    }
+  }

@@ -1,0 +1,15 @@
+.counter-container {
+    display: inline-flex;
+    align-items: baseline;
+  }
+  
+  .counter-value {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  
+  .counter-suffix {
+    font-size: inherit;
+    font-weight: inherit;
+    margin-left: 0.25rem;
+  }

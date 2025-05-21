@@ -1,0 +1,217 @@
+<!-- <section class="page-header">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Have questions or ready to start your carbon neutral journey? Get in touch with our team.</p>
+    </div>
+  </section>
+  
+  <section class="contact-info">
+    <div class="container">
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Visit Us</h3>
+          <p>123 Green Street</p>
+          <p>Eco City, EC1 2LP</p>
+        </div>
+        
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h3>Call Us</h3>
+          <p>+1 (555) 123-4567</p>
+          <p>Mon-Fri, 9am-5pm</p>
+        </div>
+        
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>Email Us</h3>
+          <p>info&#64;engreenquest.com</p>
+          <p>support&#64;engreenquest.com</p>
+        </div>
+        
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="contact-form-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="form-container">
+          <h2>Send Us a Message</h2>
+          <p>Fill out the form below and our team will get back to you within 24 hours.</p>
+          
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input 
+                type="text" 
+                id="name" 
+                formControlName="name" 
+                [ngClass]="{'error': submitted && f.name.errors}"
+              >
+              <div class="error-message" *ngIf="submitted && f.name.errors">
+                <span *ngIf="f.name.errors.required">Name is required</span>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input 
+                type="email" 
+                id="email" 
+                formControlName="email" 
+                [ngClass]="{'error': submitted && f.email.errors}"
+              >
+              <div class="error-message" *ngIf="submitted && f.email.errors">
+                <span *ngIf="f.email.errors.required">Email is required</span>
+                <span *ngIf="f.email.errors.email">Please enter a valid email</span>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" formControlName="company">
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" formControlName="phone">
+            </div>
+            
+            <div class="form-group full-width">
+              <label for="subject">Subject *</label>
+              <input 
+                type="text" 
+                id="subject" 
+                formControlName="subject" 
+                [ngClass]="{'error': submitted && f.subject.errors}"
+              >
+              <div class="error-message" *ngIf="submitted && f.subject.errors">
+                <span *ngIf="f.subject.errors.required">Subject is required</span>
+              </div>
+            </div>
+            
+            <div class="form-group full-width">
+              <label for="message">Message *</label>
+              <textarea 
+                id="message" 
+                formControlName="message" 
+                rows="6" 
+                [ngClass]="{'error': submitted && f.message.errors}"
+              ></textarea>
+              <div class="error-message" *ngIf="submitted && f.message.errors">
+                <span *ngIf="f.message.errors.required">Message is required</span>
+                <span *ngIf="f.message.errors.minlength">Message must be at least 20 characters</span>
+              </div>
+            </div>
+            
+            <div class="form-group full-width interests-group">
+              <label>I'm interested in: (select all that apply)</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item" *ngFor="let interest of interests">
+                  <input 
+                    type="checkbox" 
+                    [id]="'interest-' + interest.value" 
+                    [value]="interest.value" 
+                    (change)="onInterestChange($event)"
+                  >
+                  <label [for]="'interest-' + interest.value">{{ interest.label }}</label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group full-width consent-group">
+              <div class="checkbox-item">
+                <input 
+                  type="checkbox" 
+                  id="consent" 
+                  formControlName="consent" 
+                  [ngClass]="{'error': submitted && f.consent.errors}"
+                >
+                <label for="consent">I consent to EnGreenQuest storing my data and contacting me regarding my inquiry. *</label>
+              </div>
+              <div class="error-message" *ngIf="submitted && f.consent.errors">
+                <span *ngIf="f.consent.errors.required">Consent is required</span>
+              </div>
+            </div>
+            
+            <div class="form-group full-width">
+              <button type="submit" class="btn btn-primary">
+                <span *ngIf="!submitting">Send Message</span>
+                <span *ngIf="submitting">
+                  <i class="fas fa-spinner fa-spin"></i> Sending...
+                </span>
+              </button>
+            </div>
+            
+            <div class="form-result" *ngIf="submitResult">
+              <div class="alert" [ngClass]="{'success': submitSuccess, 'error': !submitSuccess}">
+                {{ submitMessage }}
+              </div>
+            </div>
+          </form>
+        </div>
+        
+        <div class="map-container">
+          <div class="map-wrapper">
+            <img src="assets/images/map.jpg" alt="Office Location Map" class="map-image" />
+            <div class="map-overlay">
+              <div class="map-content">
+                <h3>Our Headquarters</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Green Street, Eco City, EC1 2LP</p>
+                <a href="#" class="btn btn-outline-light">Get Directions</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="office-hours">
+            <h3>Office Hours</h3>
+            <ul>
+              <li><span>Monday - Friday:</span> 9:00 AM - 5:00 PM</li>
+              <li><span>Saturday:</span> Closed</li>
+              <li><span>Sunday:</span> Closed</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently Asked <span class="highlight">Questions</span></h2>
+        <p>Answers to common questions about getting started</p>
+      </div>
+      
+      <div class="faq-grid">
+        <div class="faq-item" *ngFor="let faq of faqs; let i = index">
+          <div class="faq-question" (click)="toggleFaq(i)">
+            <h3>{{ faq.question }}</h3>
+            <i class="fas" [ngClass]="faq.open ? 'fa-minus' : 'fa-plus'"></i>
+          </div>
+          <div class="faq-answer" [ngClass]="{'open': faq.open}">
+            <p>{{ faq.answer }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
