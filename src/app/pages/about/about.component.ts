@@ -12,103 +12,103 @@ import { RouterLink } from '@angular/router';
 export class AboutComponent implements OnInit, AfterViewInit {
   values = [
     {
-      icon: 'fas fa-check-circle',
-      title: 'Integrity',
-      description: 'We uphold the highest standards of honesty, transparency, and scientific rigor in all our work.'
+      icon: 'fas fa-microscope',
+      title: 'Science-Backed Solutions',
+      description: 'Our projects are grounded in rigorous scientific research and evidence-based methodologies to ensure maximum environmental impact.'
     },
     {
-      icon: 'fas fa-lightbulb',
-      title: 'Innovation',
-      description: 'We continuously seek new and better ways to address climate challenges for our clients and the planet.'
-    },
-    {
-      icon: 'fas fa-hands-helping',
-      title: 'Collaboration',
-      description: 'We believe in the power of partnerships to create meaningful environmental and business outcomes.'
-    },
-    {
-      icon: 'fas fa-globe',
-      title: 'Impact',
-      description: 'We measure our success by the real-world difference our work makes for communities and ecosystems.'
-    },
-    {
-      icon: 'fas fa-bolt',
-      title: 'Agility',
-      description: 'We adapt quickly to evolving science, market conditions, and client needs.'
+      icon: 'fas fa-eye',
+      title: 'Transparency',
+      description: 'We provide complete transparency in our project development, monitoring, and reporting processes for full accountability.'
     },
     {
       icon: 'fas fa-users',
-      title: 'Inclusivity',
-      description: 'We ensure that climate solutions benefit diverse communities and stakeholders around the world.'
+      title: 'Community-Centric',
+      description: 'We prioritize local communities in our project design, ensuring they benefit from and participate in our initiatives.'
+    },
+    {
+      icon: 'fas fa-leaf',
+      title: 'Environmental Integrity',
+      description: 'Every project delivers real, measurable, and permanent environmental benefits beyond carbon sequestration.'
+    },
+    {
+      icon: 'fas fa-handshake',
+      title: 'Trusted Partnerships',
+      description: 'We build lasting relationships with investors, NGOs, governments, and communities to maximize collective impact.'
+    },
+    {
+      icon: 'fas fa-globe',
+      title: 'Global Impact',
+      description: 'Our projects span multiple continents, addressing climate change while supporting local sustainable development.'
     }
   ];
   
   team = [
     {
-      name: 'Sarah Chen',
+      name: 'Dr. Priya Sharma',
       title: 'CEO & Founder',
-      bio: 'Former sustainability director with 15+ years experience in environmental policy and carbon markets.',
+      bio: 'Environmental scientist with 20+ years experience in carbon markets and sustainable development. Previously led carbon initiatives at major consulting firms.',
       image: 'assets/images/team-1.jpg'
     },
     {
-      name: 'Michael Rodriguez',
-      title: 'Chief Science Officer',
-      bio: 'Climate scientist with a PhD in Environmental Engineering and background in carbon cycle research.',
+      name: 'Marcus Thompson',
+      title: 'Chief Technology Officer',
+      bio: 'Renewable energy expert with extensive experience in IREC certification and clean energy project development across emerging markets.',
       image: 'assets/images/team-2.jpg'
     },
     {
-      name: 'Aisha Patel',
-      title: 'Head of Partnerships',
-      bio: 'Expert in building strategic alliances between businesses, NGOs, and government agencies.',
+      name: 'Fatima Al-Rashid',
+      title: 'Head of Community Projects',
+      bio: 'International development specialist with deep expertise in community-based carbon initiatives and cookstove programs across Africa and Asia.',
       image: 'assets/images/team-3.jpg'
     },
     {
-      name: 'James Wilson',
-      title: 'Technology Director',
-      bio: 'Software engineer specializing in environmental data systems and carbon accounting platforms.',
+      name: 'Dr. James Chen',
+      title: 'Director of Nature-Based Solutions',
+      bio: 'Forest ecologist and carbon sequestration researcher, bringing scientific rigor to our reforestation and biochar project development.',
       image: 'assets/images/team-4.jpg'
     }
   ];
   
   timeline = [
     {
-      year: '2018',
+      year: '2025 Q1',
       title: 'Company Founded',
-      description: 'EnGreenQuest was established with a mission to make carbon credits accessible to businesses of all sizes.'
+      description: 'Engreen Quest established with a mission to regenerate the planet through innovative carbon credit solutions, backed by experienced sustainability professionals.'
     },
     {
-      year: '2019',
-      title: 'First Major Partnerships',
-      description: 'Launched collaborations with leading reforestation and renewable energy projects across three continents.'
+      year: '2025 Q2',
+      title: 'First Project Partnerships',
+      description: 'Secured partnerships with verified carbon project developers and established relationships with certification bodies including Gold Standard and Verra.'
     },
     {
-      year: '2020',
+      year: '2025 Q3',
+      title: 'Initial Project Portfolio',
+      description: 'Launched our first community cookstove program in Kenya and initiated reforestation project development in Brazil and Indonesia.'
+    },
+    {
+      year: '2025 Q4',
       title: 'Technology Platform Launch',
-      description: 'Introduced our proprietary carbon management software, enabling real-time tracking and reporting.'
+      description: 'Deployed our carbon project tracking and verification platform, enabling real-time monitoring and transparent reporting for all stakeholders.'
     },
     {
-      year: '2021',
-      title: 'International Expansion',
-      description: 'Opened offices in Europe and Asia to better serve our growing global client base.'
+      year: '2026',
+      title: 'Market Expansion',
+      description: 'Expand operations across Southeast Asia and Africa, focusing on community-centric projects and renewable energy initiatives.'
     },
     {
-      year: '2022',
-      title: 'Industry Recognition',
-      description: 'Received multiple awards for innovation in climate tech and corporate sustainability solutions.'
-    },
-    {
-      year: '2024',
-      title: 'Carbon Impact Milestone',
-      description: 'Surpassed 2 million tons of CO₂ offset through our client projects and partnerships.'
+      year: '2027',
+      title: 'Impact Milestone Target',
+      description: 'Goal to facilitate 500,000 tons of CO₂ sequestration and positively impact 50,000 community members through our diverse project portfolio.'
     }
   ];
   
   partners = [
-    { name: 'Green Energy Alliance', logo: 'assets/images/partner-1.png' },
-    { name: 'Global Climate Initiative', logo: 'assets/images/partner-2.png' },
-    { name: 'Sustainable Business Council', logo: 'assets/images/partner-3.png' },
-    { name: 'Tech for Earth', logo: 'assets/images/partner-4.png' },
-    { name: 'Reforestation International', logo: 'assets/images/partner-5.png' }
+    { name: 'Gold Standard', logo: 'assets/images/partner-1.png' },
+    { name: 'Verra', logo: 'assets/images/partner-2.png' },
+    { name: 'International REC Standard', logo: 'assets/images/partner-3.png' },
+    { name: 'UN Global Compact', logo: 'assets/images/partner-4.png' },
+    { name: 'Climate Action Reserve', logo: 'assets/images/partner-5.png' }
   ];
   
   constructor() {}

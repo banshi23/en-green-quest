@@ -1,112 +1,148 @@
 <section class="page-header">
-    <div class="container">
-      <h1>About Us</h1>
-      <p>Learn more about our mission, values, and the team behind EnGreenQuest.</p>
+  <div class="container">
+    <h1>About Engreen Quest</h1>
+    <p>Pioneering sustainable impact through innovative carbon credit solutions that regenerate the planet, one project at a time.</p>
+  </div>
+</section>
+
+<section class="about-mission">
+  <div class="container">
+    <div class="mission-content">
+      <h2>Our <span class="highlight">Mission</span></h2>
+      <p>
+        Founded in 2025, Engreen Quest is committed to building a greener, more sustainable future by empowering 
+        climate-positive action through innovative carbon credit projects. As a new full-service carbon solutions 
+        company, we specialize in designing, developing, and managing end-to-end carbon credit projects 
+        across nature-based, community-driven, and renewable energy sectors.
+      </p>
+      <p>
+        Led by experienced sustainability professionals with decades of combined expertise, we bring fresh innovation 
+        to the carbon markets while maintaining the highest standards of integrity and transparency. Whether you're 
+        an investor, NGO, government body, or corporate sustainability leader, Engreen Quest is your trusted partner 
+        in delivering measurable climate impact.
+      </p>
     </div>
-  </section>
-  
-  <section class="about-mission">
-    <div class="container">
-      <div class="mission-content">
-        <h2>Our <span class="highlight">Mission</span></h2>
-        <p>
-          At EnGreenQuest, we are dedicated to empowering businesses to take meaningful climate action. 
-          Our mission is to make carbon neutrality accessible, transparent, and impactful for organizations of all sizes.
-        </p>
-        <p>
-          We believe that by combining rigorous science, innovative technology, and strategic partnerships, 
-          we can accelerate the global transition to a low-carbon future while helping businesses thrive.
-        </p>
-      </div>
-      <div class="mission-image animate-in">
-        <img src="assets/images/mission.jpg" alt="Team planting trees" />
-      </div>
+    <div class="mission-image animate-in">
+      <img src="assets/images/mission.jpg" alt="Carbon project implementation" />
     </div>
-  </section>
-  
-  <section class="values">
-    <div class="container">
-      <div class="section-header">
-        <h2>Our <span class="highlight">Values</span></h2>
-        <p>The principles that guide everything we do</p>
+  </div>
+</section>
+
+<section class="focus-areas">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our <span class="highlight">Focus Areas</span></h2>
+      <p>Three key sectors where we deliver transformative climate solutions</p>
+    </div>
+    
+    <div class="focus-grid">
+      <div class="focus-card">
+        <div class="focus-emoji">🌿</div>
+        <h3>Nature-Based Solutions</h3>
+        <p>We develop robust, science-backed carbon projects including reforestation, sustainable agriculture, and biochar initiatives. These projects not only sequester carbon but also restore ecosystems and support biodiversity.</p>
       </div>
       
-      <div class="values-grid">
-        <div class="value-card" *ngFor="let value of values">
-          <div class="value-icon">
-            <i [class]="value.icon"></i>
-          </div>
-          <h3>{{ value.title }}</h3>
-          <p>{{ value.description }}</p>
+      <div class="focus-card">
+        <div class="focus-emoji">🏡</div>
+        <h3>Community-Centric Carbon Projects</h3>
+        <p>We bring transformative change to rural communities by replacing traditional mud stoves with low-emission, fuel-efficient cookstoves—improving health, reducing emissions, and preserving local forests.</p>
+      </div>
+      
+      <div class="focus-card">
+        <div class="focus-emoji">⚡</div>
+        <h3>Renewable Energy & IREC Projects</h3>
+        <p>We help organizations harness the power of renewable energy by developing clean energy carbon offset projects and managing International Renewable Energy Certificate (IREC) issuances, enabling verified claims of green energy use.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our <span class="highlight">Values</span></h2>
+      <p>The principles that guide everything we do</p>
+    </div>
+    
+    <div class="values-grid">
+      <div class="value-card" *ngFor="let value of values">
+        <div class="value-icon">
+          <i [class]="value.icon"></i>
+        </div>
+        <h3>{{ value.title }}</h3>
+        <p>{{ value.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our <span class="highlight">Team</span></h2>
+      <p>Meet the experts behind Engreen Quest</p>
+    </div>
+    
+    <div class="team-grid">
+      <div class="team-member" *ngFor="let member of team">
+        <div class="member-image">
+          <img [src]="member.image" [alt]="member.name" />
+        </div>
+        <h3>{{ member.name }}</h3>
+        <p class="member-title">{{ member.title }}</p>
+        <p class="member-bio">{{ member.bio }}</p>
+        <div class="member-socials">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
         </div>
       </div>
     </div>
-  </section>
-  
-  <section class="team">
-    <div class="container">
-      <div class="section-header">
-        <h2>Our <span class="highlight">Team</span></h2>
-        <p>Meet the experts behind EnGreenQuest</p>
-      </div>
-      
-      <div class="team-grid">
-        <div class="team-member" *ngFor="let member of team">
-          <div class="member-image">
-            <img [src]="member.image" [alt]="member.name" />
-          </div>
-          <h3>{{ member.name }}</h3>
-          <p class="member-title">{{ member.title }}</p>
-          <p class="member-bio">{{ member.bio }}</p>
-          <div class="member-socials">
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          </div>
+  </div>
+</section>
+
+<section class="timeline">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our <span class="highlight">Journey</span></h2>
+      <p>Our roadmap from startup to global impact leader</p>
+    </div>
+    
+    <div class="timeline-container">
+      <div class="timeline-item" *ngFor="let item of timeline; let i = index" [ngClass]="{'right': i % 2 === 1}">
+        <div class="timeline-content">
+          <div class="timeline-year">{{ item.year }}</div>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
         </div>
       </div>
     </div>
-  </section>
-  
-  <section class="timeline">
-    <div class="container">
-      <div class="section-header">
-        <h2>Our <span class="highlight">Journey</span></h2>
-        <p>How we've grown over the years</p>
-      </div>
-      
-      <div class="timeline-container">
-        <div class="timeline-item" *ngFor="let item of timeline; let i = index" [ngClass]="{'right': i % 2 === 1}">
-          <div class="timeline-content">
-            <div class="timeline-year">{{ item.year }}</div>
-            <h3>{{ item.title }}</h3>
-            <p>{{ item.description }}</p>
-          </div>
-        </div>
+  </div>
+</section>
+
+<section class="partners">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our <span class="highlight">Standards & Partners</span></h2>
+      <p>Working with leading certification bodies and organizations</p>
+    </div>
+    
+    <div class="partners-grid">
+      <div class="partner-logo" *ngFor="let partner of partners">
+        <img [src]="partner.logo" [alt]="partner.name" />
       </div>
     </div>
-  </section>
-  
-  <section class="partners">
-    <div class="container">
-      <div class="section-header">
-        <h2>Our <span class="highlight">Partners</span></h2>
-        <p>Collaborating for greater impact</p>
-      </div>
-      
-      <div class="partners-grid">
-        <div class="partner-logo" *ngFor="let partner of partners">
-          <img [src]="partner.logo" [alt]="partner.name" />
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-content">
-        <h2>Ready to Join Our Mission?</h2>
-        <p>Start your journey to carbon neutrality with EnGreenQuest today.</p>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Join Our Quest from Day One?</h2>
+      <p>Be part of our journey as we launch innovative carbon solutions that benefit communities and ecosystems worldwide. Partner with us to create measurable climate impact from the very beginning.</p>
+      <div class="cta-buttons">
         <a routerLink="/contact" class="btn btn-primary">Get in Touch</a>
+        <a routerLink="/services" class="btn btn-outline">Explore Our Projects</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>

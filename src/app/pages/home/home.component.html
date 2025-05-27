@@ -1,78 +1,124 @@
 <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h1 class="animate-in">Transform Your <span class="highlight">Environmental Impact</span></h1>
-        <p class="animate-in">Offset your carbon footprint through verified carbon credits and contribute to a sustainable future.</p>
-        <div class="cta-buttons animate-in">
-          <a routerLink="/services" class="btn btn-primary">Explore Solutions</a>
-          <a routerLink="/contact" class="btn btn-outline">Get Started</a>
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="animate-in">Pioneering <span class="highlight">Sustainable Impact</span> Through Carbon Solutions</h1>
+      <p class="animate-in">Building a greener, more sustainable future by empowering climate-positive action through innovative carbon credit projects across nature-based, community-driven, and renewable energy sectors.</p>
+      <div class="cta-buttons animate-in">
+        <a routerLink="/services" class="btn btn-primary">Explore Our Projects</a>
+        <a routerLink="/contact" class="btn btn-outline">Partner With Us</a>
+      </div>
+    </div>
+    <div class="hero-image animate-in">
+      <img src="assets/images/hero-image.jpg" alt="Sustainable Earth" />
+    </div>
+  </div>
+  <div class="scroll-indicator" (click)="scrollToSection('features')">
+    <span>Scroll Down</span>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+</section>
+
+<section id="features" class="features">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why Choose <span class="highlight">Engreen Quest</span>?</h2>
+      <p>Full-service carbon solutions company specializing in designing, developing, and managing end-to-end carbon credit projects with measurable climate impact.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card" *ngFor="let feature of features; let i = index">
+        <div class="feature-icon">
+          <i [class]="feature.icon"></i>
         </div>
-      </div>
-      <div class="hero-image animate-in">
-        <img src="assets/images/hero-image.jpg" alt="Sustainable Earth" />
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.description }}</p>
       </div>
     </div>
-    <div class="scroll-indicator" (click)="scrollToSection('features')">
-      <span>Scroll Down</span>
-      <i class="fas fa-chevron-down"></i>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="container">
+    <div class="section-header">
+      <h2>The <span class="highlight">Engreen Quest</span> Advantage</h2>
+      <p>What sets our carbon solutions apart in the market</p>
     </div>
-  </section>
-  
-  <section id="features" class="features">
-    <div class="container">
-      <div class="section-header">
-        <h2>Why Choose <span class="highlight">EnGreenQuest</span>?</h2>
-        <p>We provide transparent, verified solutions to help your business reach its sustainability goals.</p>
+    
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3>Measurable Impact</h3>
+        <p>Track real environmental outcomes with transparent reporting and verified carbon sequestration data.</p>
       </div>
       
-      <div class="features-grid">
-        <div class="feature-card" *ngFor="let feature of features; let i = index">
-          <div class="feature-icon">
-            <i [class]="feature.icon"></i>
-          </div>
-          <h3>{{ feature.title }}</h3>
-          <p>{{ feature.description }}</p>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-users"></i>
         </div>
-      </div>
-    </div>
-  </section>
-  
-  <section class="stats">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item" *ngFor="let stat of stats">
-          <div class="stat-number">{{ stat.value }}</div>
-          <div class="stat-label">{{ stat.label }}</div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <section class="process">
-    <div class="container">
-      <div class="section-header">
-        <h2>Our <span class="highlight">Process</span></h2>
-        <p>Simple steps to carbon neutrality for your organization</p>
+        <h3>Community Benefits</h3>
+        <p>Every project creates positive social impact, improving livelihoods and health outcomes for local communities.</p>
       </div>
       
-      <div class="process-steps">
-        <div class="process-step" *ngFor="let step of process; let i = index">
-          <div class="step-number">{{ i + 1 }}</div>
-          <div class="step-content">
-            <h3>{{ step.title }}</h3>
-            <p>{{ step.description }}</p>
-          </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Risk Management</h3>
+        <p>Diversified portfolio approach and rigorous due diligence minimize investment risks while maximizing returns.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-clock"></i>
+        </div>
+        <h3>End-to-End Service</h3>
+        <p>From project design to credit issuance and ongoing management - we handle everything for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item" *ngFor="let stat of stats">
+        <div class="stat-number">{{ stat.value }}</div>
+        <div class="stat-label">{{ stat.label }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our <span class="highlight">Process</span></h2>
+      <p>Comprehensive approach to carbon project development and management</p>
+    </div>
+    
+    <div class="process-steps">
+      <div class="process-step" *ngFor="let step of process; let i = index">
+        <div class="step-number">{{ i + 1 }}</div>
+        <div class="step-content">
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.description }}</p>
         </div>
       </div>
     </div>
-  </section>
-  
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-content">
-        <h2>Ready to Reduce Your Carbon Footprint?</h2>
-        <p>Join hundreds of businesses already on their journey to carbon neutrality.</p>
-        <a routerLink="/contact" class="btn btn-primary">Contact Us Today</a>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Join Us on a Quest to Regenerate the Planet</h2>
+      <p>Whether you're an investor, NGO, government body, or corporate sustainability leader, Engreen Quest is your trusted partner in delivering measurable climate impact.</p>
+      <div class="cta-buttons">
+        <a routerLink="/contact" class="btn btn-primary">Start Your Project</a>
+        <a routerLink="/services" class="btn btn-outline">Learn More</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>

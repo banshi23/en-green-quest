@@ -13,60 +13,60 @@ import { AnimationService } from '../../services/animation.service';
 export class HomeComponent implements OnInit, AfterViewInit {
   features = [
     {
-      icon: 'fas fa-leaf',
-      title: 'Verified Carbon Credits',
-      description: 'All our carbon credits meet the highest industry standards and are independently verified for maximum impact.'
+      icon: 'fas fa-seedling',
+      title: 'Nature-Based Solutions',
+      description: 'Science-backed projects that sequester carbon while restoring ecosystems - from reforestation to sustainable agriculture.'
+    },
+    {
+      icon: 'fas fa-home',
+      title: 'Community Impact',
+      description: 'Clean cookstove programs that improve health outcomes while reducing emissions and preserving forests.'
+    },
+    {
+      icon: 'fas fa-bolt',
+      title: 'Renewable Energy',
+      description: 'Clean energy projects with IREC certification, enabling verified renewable energy claims for your organization.'
     },
     {
       icon: 'fas fa-chart-line',
-      title: 'Transparent Reporting',
-      description: 'Track your carbon offset journey with detailed reports and real-time progress monitoring.'
-    },
-    {
-      icon: 'fas fa-handshake',
-      title: 'Customized Solutions',
-      description: 'We create personalized sustainability strategies tailored to your organization\'s specific needs and goals.'
-    },
-    {
-      icon: 'fas fa-globe-americas',
-      title: 'Global Impact Projects',
-      description: 'Support diverse environmental initiatives around the world, from reforestation to renewable energy.'
+      title: 'Transparent Tracking',
+      description: 'Real-time monitoring and reporting of project outcomes with detailed impact metrics and verification.'
     },
     {
       icon: 'fas fa-certificate',
-      title: 'ESG Compliance',
-      description: 'Meet regulatory requirements and enhance your ESG profile with comprehensive reporting solutions.'
+      title: 'Verified Credits',
+      description: 'High-quality carbon credits meeting international standards with independent third-party verification.'
     },
     {
-      icon: 'fas fa-users',
-      title: 'Expert Consultation',
-      description: 'Work with our team of sustainability experts to develop and implement effective carbon strategies.'
+      icon: 'fas fa-handshake',
+      title: 'Full-Service Support',
+      description: 'End-to-end project management from initial design through credit issuance and ongoing monitoring.'
     }
   ];
   
   stats = [
-    { value: '2M+', label: 'Tons of CO₂ Offset' },
-    { value: '350+', label: 'Client Companies' },
-    { value: '45+', label: 'Countries Served' },
-    { value: '96%', label: 'Client Satisfaction' }
+    { value: '50+', label: 'Active Projects' },
+    { value: '25+', label: 'Countries Served' },
+    { value: '1.5M+', label: 'Tons CO₂ Sequestered' },
+    { value: '100K+', label: 'Communities Impacted' }
   ];
   
   process = [
     {
-      title: 'Measure Your Carbon Footprint',
-      description: 'We analyze your organization\'s operations to calculate your total carbon emissions across all activities.'
+      title: 'Project Design & Development',
+      description: 'We design science-backed carbon projects tailored to local ecosystems and community needs, ensuring maximum environmental and social impact.'
     },
     {
-      title: 'Set Reduction Goals',
-      description: 'Together, we\'ll establish realistic carbon reduction targets aligned with your business objectives and global standards.'
+      title: 'Implementation & Management',
+      description: 'Our expert team manages all aspects of project implementation, from community engagement to technical execution and monitoring.'
     },
     {
-      title: 'Implement Reduction Strategies',
-      description: 'Our experts will help you implement practical changes to reduce emissions at the source.'
+      title: 'Verification & Certification',
+      description: 'We ensure all projects meet rigorous international standards and undergo independent verification for carbon credit issuance.'
     },
     {
-      title: 'Offset Remaining Emissions',
-      description: 'Balance your unavoidable emissions by investing in verified carbon credit projects that make a real difference.'
+      title: 'Impact Delivery & Reporting',
+      description: 'We provide transparent reporting on project outcomes, including carbon sequestration, biodiversity restoration, and community benefits.'
     }
   ];
   

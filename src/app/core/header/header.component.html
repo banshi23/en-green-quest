@@ -1,6 +1,8 @@
-<header class="header" [ngClass]="{'scrolled': isScrolled}">
+<!-- <header class="header" [ngClass]="{'scrolled': isScrolled}">
     <div class="container">
       <a routerLink="/" class="logo">
+                <img src="assets/images/logo.png" alt="Engreen Quest - Carbon Project Development Company" />
+
         <span class="logo-text">EnGreenQuest</span>
       </a>
       
@@ -18,4 +20,35 @@
         <app-dark-mode-toggle></app-dark-mode-toggle>
       </nav>
     </div>
-  </header>
+  </header> -->
+
+  <header class="header" [ngClass]="{'scrolled': isScrolled}">
+  <div class="container">
+    <a routerLink="/" class="logo">
+      <div class="logo-image">
+        <img src="assets/images/logo_icon.png" alt="Engreen Quest - Carbon Project Development Company" />
+      </div>
+      <div class="logo-content">
+        <span class="logo-text">engreen quest</span>
+        <span class="logo-tagline">CARBON PROJECT DEVELOPMENT COMPANY</span>
+      </div>
+    </a>
+   
+    <button class="mobile-menu-toggle" (click)="toggleMobileMenu()" aria-label="Toggle Menu">
+      <span [ngClass]="{'open': isMobileMenuOpen}"></span>
+    </button>
+   
+    <nav class="nav-menu" [ngClass]="{'open': isMobileMenuOpen}">
+      <ul>
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+          <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+          <li><a routerLink="/services" routerLinkActive="active">Services</a></li>
+          <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+      </ul>
+      <div class="header-actions">
+        <app-dark-mode-toggle></app-dark-mode-toggle>
+        <a routerLink="/contact" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+    </nav>
+  </div>
+</header>

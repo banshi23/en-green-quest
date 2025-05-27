@@ -10,217 +10,91 @@ import { RouterLink } from '@angular/router';
   styleUrl: './services.component.scss'
 })
 export class ServicesComponent implements OnInit {
-  services = [
+  
+  mainServices = [
     {
-      icon: 'fas fa-chart-line',
-      title: 'Carbon Footprint Assessment',
-      description: 'Comprehensive analysis of your organization\'s greenhouse gas emissions across all operations and supply chains.',
+      icon: 'fas fa-leaf',
+      title: 'Nature-Based Solutions (NBS) Projects',
+      emoji: '🌱',
+      description: 'We specialize in designing, developing, and managing Nature-Based Solutions (NBS) projects that harness the power of ecosystems to sequester carbon, restore biodiversity, and support communities.',
       features: [
-        'Scope 1, 2, and 3 emissions analysis',
-        'Detailed emissions inventory',
-        'Industry benchmarking',
-        'Customized reporting dashboard'
-      ]
+        'Afforestation and reforestation',
+        'Wetland and mangrove restoration',
+        'Sustainable land use practices',
+        'Community-led forest conservation'
+      ],
+      note: 'We align all NBS projects with verified carbon standards, ensuring transparency, accountability, and measurable climate impact.'
     },
     {
-      icon: 'fas fa-lightbulb',
-      title: 'Reduction Strategy',
-      description: 'Develop practical, cost-effective approaches to reduce emissions at the source and improve efficiency.',
+      icon: 'fas fa-building',
+      title: 'Carbon Built Solutions (CBS)',
+      emoji: '🧱',
+      description: 'Carbon Built Solutions (CBS) focuses on decarbonizing the built environment through innovative techniques and low-carbon materials. We help clients achieve net-zero construction goals.',
       features: [
-        'Energy efficiency audits',
-        'Renewable energy transition planning',
-        'Supply chain optimization',
-        'Employee engagement programs'
-      ]
+        'Integrating carbon capture in construction processes',
+        'Utilizing carbon-negative materials (e.g., bio-concrete, green cement)',
+        'Implementing energy-efficient infrastructure designs',
+        'Enabling material circularity and lifecycle carbon accounting'
+      ],
+      note: 'Our CBS offerings combine engineering excellence with climate science to reshape urban sustainability.'
     },
     {
-      icon: 'fas fa-sync-alt',
-      title: 'Carbon Offset Solutions',
-      description: 'High-quality, verified carbon credits from diverse projects to offset your unavoidable emissions.',
+      icon: 'fas fa-solar-panel',
+      title: 'Renewable Energy (RE)',
+      emoji: '☀️',
+      description: 'Our Renewable Energy (RE) services empower organizations to switch to clean power sources while generating verifiable carbon credits. We support the development and registration of clean energy projects.',
       features: [
-        'Customized offset portfolio',
-        'Project selection assistance',
-        'Transparent verification',
-        'Impact reporting and storytelling'
-      ]
-    },
-    {
-      icon: 'fas fa-file-alt',
-      title: 'ESG Reporting & Compliance',
-      description: 'Meet regulatory requirements and stakeholder expectations with comprehensive sustainability reporting.',
-      features: [
-        'GHG Protocol compliance',
-        'CDP reporting support',
-        'TCFD alignment',
-        'Sustainability report development'
-      ]
-    },
-    {
-      icon: 'fas fa-users-cog',
-      title: 'Sustainability Consulting',
-      description: 'Strategic guidance to integrate climate action into your core business strategy and operations.',
-      features: [
-        'Sustainability goal setting',
-        'Integration with business strategy',
-        'Executive workshops',
-        'Sustainable innovation development'
-      ]
-    },
-    {
-      icon: 'fas fa-bullhorn',
-      title: 'Climate Communication',
-      description: 'Effectively communicate your climate commitments and achievements to stakeholders and customers.',
-      features: [
-        'Sustainability messaging strategy',
-        'Environmental claims guidance',
-        'Stakeholder engagement',
-        'Impact storytelling'
-      ]
+        'Solar and wind farms',
+        'Biomass and biogas systems',
+        'Small-scale hydroelectric projects',
+        'Off-grid clean energy for rural communities'
+      ],
+      note: 'Each RE project is structured to deliver robust emission reductions, verified under global standards like Verra and Gold Standard.'
     }
   ];
-  
-  projects = [
+
+  whyChooseUs = [
     {
-      title: 'Amazon Rainforest Conservation',
-      location: 'Brazil',
-      description: 'Protecting critical rainforest ecosystems while supporting indigenous communities through sustainable forest management practices.',
-      image: 'assets/images/project-1.jpg',
-      carbonOffset: '500,000 tons',
-      area: '50,000 hectares'
+      icon: 'fas fa-microscope',
+      title: 'Science-driven project design',
+      description: 'Our approach is rooted in rigorous scientific methodology and evidence-based practices.'
     },
     {
-      title: 'Wind Farm Development',
-      location: 'India',
-      description: 'Construction and operation of utility-scale wind farms to replace fossil fuel energy generation and improve local air quality.',
-      image: 'assets/images/project-2.jpg',
-      carbonOffset: '350,000 tons',
-      area: '2,000 hectares'
+      icon: 'fas fa-hands-helping',
+      title: 'End-to-end support',
+      description: 'Complete support from feasibility studies to credit issuance and ongoing project management.'
     },
     {
-      title: 'Mangrove Restoration',
-      location: 'Indonesia',
-      description: 'Rehabilitating coastal mangrove ecosystems to sequester carbon, protect coastlines, and enhance marine biodiversity.',
-      image: 'assets/images/project-3.jpg',
-      carbonOffset: '250,000 tons',
-      area: '5,000 hectares'
+      icon: 'fas fa-certificate',
+      title: 'Global registry compliance',
+      description: 'Full compliance with leading standards including Verra, Gold Standard, and CDM.'
     },
     {
-      title: 'Community Solar Initiative',
-      location: 'Kenya',
-      description: 'Installing solar systems in rural communities to replace diesel generators and kerosene lamps while improving energy access.',
-      image: 'assets/images/project-4.jpg',
-      carbonOffset: '150,000 tons',
-      area: '500 communities'
+      icon: 'fas fa-heart',
+      title: 'Co-benefits delivery',
+      description: 'Positive impact for communities, biodiversity, and climate resilience beyond carbon reduction.'
     }
   ];
-  
-  process = [
-    {
-      title: 'Initial Consultation',
-      description: 'We start with understanding your organization\'s operations, sustainability goals, and carbon reduction objectives.'
-    },
-    {
-      title: 'Carbon Assessment',
-      description: 'Our team conducts a comprehensive analysis of your emissions across all scopes to establish your carbon baseline.'
-    },
-    {
-      title: 'Strategy Development',
-      description: 'Based on the assessment, we create a customized roadmap with specific reduction targets and offset strategies.'
-    },
-    {
-      title: 'Implementation Support',
-      description: 'We provide ongoing guidance and tools to implement carbon reduction initiatives across your organization.'
-    },
-    {
-      title: 'Carbon Credit Selection',
-      description: 'Together, we identify and invest in verified carbon offset projects aligned with your values and objectives.'
-    },
-    {
-      title: 'Monitoring & Reporting',
-      description: 'We track progress, measure impact, and create transparent reports for stakeholders and compliance purposes.'
-    }
-  ];
-  
+
   certifications = [
     {
+      name: 'Verra (VCS)',
+      logo: 'assets/images/verra-logo.png',
+      description: 'The world\'s most widely used voluntary GHG program with rigorous certification standards.'
+    },
+    {
       name: 'Gold Standard',
-      logo: 'assets/images/cert-1.png',
+      logo: 'assets/images/gold-standard-logo.png',
       description: 'Highest quality carbon offset projects with verified sustainable development benefits.'
     },
     {
-      name: 'Verified Carbon Standard',
-      logo: 'assets/images/cert-2.png',
-      description: 'The world\'s most widely used voluntary GHG program with rigorous certification.'
-    },
-    {
-      name: 'Climate Action Reserve',
-      logo: 'assets/images/cert-3.png',
-      description: 'North American offset registry ensuring transparency and environmental integrity.'
-    },
-    {
-      name: 'Carbon Trust Standard',
-      logo: 'assets/images/cert-4.png',
-      description: 'Independent certification of organizational carbon reduction achievements.'
+      name: 'Clean Development Mechanism',
+      logo: 'assets/images/cdm-logo.png',
+      description: 'UN framework mechanism for emission reduction projects in developing countries.'
     }
   ];
-  
-  testimonials = [
-    {
-      quote: 'EnGreenQuest transformed our sustainability strategy with their thorough approach and expert guidance. They helped us achieve carbon neutrality while improving our operational efficiency.',
-      name: 'Rebecca Johnson',
-      title: 'Sustainability Director',
-      company: 'Global Retail Inc.',
-      image: 'assets/images/testimonial-1.jpg'
-    },
-    {
-      quote: 'The team\'s deep knowledge of carbon markets and regulatory requirements was invaluable. They simplified a complex process and delivered measurable results for our business.',
-      name: 'David Chen',
-      title: 'CEO',
-      company: 'EcoTech Solutions',
-      image: 'assets/images/testimonial-2.jpg'
-    },
-    {
-      quote: 'Working with EnGreenQuest has been a game-changer for our ESG reporting. Their analytics platform provides unprecedented visibility into our carbon footprint across all operations.',
-      name: 'Sofia Rodriguez',
-      title: 'CFO',
-      company: 'Meridian Manufacturing',
-      image: 'assets/images/testimonial-3.jpg'
-    }
-  ];
-  
-  faqs = [
-    {
-      question: 'What are carbon credits and how do they work?',
-      answer: 'Carbon credits represent one metric ton of carbon dioxide (or equivalent greenhouse gas) that has been reduced, removed, or avoided. Organizations purchase these credits to offset their unavoidable emissions, effectively investing in projects that reduce carbon elsewhere in the world.',
-      open: true
-    },
-    {
-      question: 'How do you ensure the quality of carbon offset projects?',
-      answer: 'All our carbon offset projects are independently verified by leading certification standards such as Gold Standard and Verified Carbon Standard. We conduct rigorous due diligence on each project, ensuring real, measurable, and permanent carbon reductions with strong environmental and social co-benefits.',
-      open: false
-    },
-    {
-      question: 'What\'s the difference between carbon neutral and net-zero?',
-      answer: 'Carbon neutrality involves balancing emissions by offsetting an equivalent amount of carbon. Net-zero is more ambitious, requiring deep emissions reductions across all scopes (typically 90-95%) with only a small amount of hard-to-abate emissions being offset through carbon removal projects specifically.',
-      open: false
-    },
-    {
-      question: 'How long does the carbon assessment process take?',
-      answer: 'The timeline varies based on your organization\'s size and complexity, but typically ranges from 4-8 weeks. This includes data collection, analysis, and the development of your customized carbon management strategy.',
-      open: false
-    },
-    {
-      question: 'Can small businesses benefit from carbon management services?',
-      answer: 'Absolutely! We offer scalable solutions designed for organizations of all sizes. Our packages for small businesses provide cost-effective approaches to measure, reduce, and offset emissions while meeting growing stakeholder expectations for climate action.',
-      open: false
-    }
-  ];
-  
+
   constructor() {}
   
   ngOnInit() {}
-  
-  toggleFaq(index: number) {
-    this.faqs[index].open = !this.faqs[index].open;
-  }
 }
