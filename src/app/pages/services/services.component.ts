@@ -15,7 +15,6 @@ export class ServicesComponent implements OnInit {
     {
       icon: 'fas fa-leaf',
       title: 'Nature-Based Solutions (NBS) Projects',
-      emoji: '🌱',
       description: 'We specialize in designing, developing, and managing Nature-Based Solutions (NBS) projects that harness the power of ecosystems to sequester carbon, restore biodiversity, and support communities.',
       features: [
         'Afforestation and reforestation',
@@ -28,7 +27,6 @@ export class ServicesComponent implements OnInit {
     {
       icon: 'fas fa-building',
       title: 'Carbon Built Solutions (CBS)',
-      emoji: '🧱',
       description: 'Carbon Built Solutions (CBS) focuses on decarbonizing the built environment through innovative techniques and low-carbon materials. We help clients achieve net-zero construction goals.',
       features: [
         'Integrating carbon capture in construction processes',
@@ -41,7 +39,6 @@ export class ServicesComponent implements OnInit {
     {
       icon: 'fas fa-solar-panel',
       title: 'Renewable Energy (RE)',
-      emoji: '☀️',
       description: 'Our Renewable Energy (RE) services empower organizations to switch to clean power sources while generating verifiable carbon credits. We support the development and registration of clean energy projects.',
       features: [
         'Solar and wind farms',
@@ -79,17 +76,17 @@ export class ServicesComponent implements OnInit {
   certifications = [
     {
       name: 'Verra (VCS)',
-      logo: 'assets/images/verra-logo.png',
+      logo: 'assets/partners/verra-vector-logo.webp',
       description: 'The world\'s most widely used voluntary GHG program with rigorous certification standards.'
     },
     {
       name: 'Gold Standard',
-      logo: 'assets/images/gold-standard-logo.png',
+      logo: 'assets/partners/Gold Standard Logo.svg',
       description: 'Highest quality carbon offset projects with verified sustainable development benefits.'
     },
     {
       name: 'Clean Development Mechanism',
-      logo: 'assets/images/cdm-logo.png',
+      logo: 'assets/partners/unfcc.png',
       description: 'UN framework mechanism for emission reduction projects in developing countries.'
     }
   ];
