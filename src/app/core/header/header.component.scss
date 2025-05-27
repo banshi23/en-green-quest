@@ -217,6 +217,9 @@
       .logo-content {
         .logo-text {
           font-size: 1.25rem;
+          .logo_text_highlight{
+              color: var(  --logo-text-highlight) !important;
+          }
         }
         
         .logo-tagline {
@@ -273,6 +276,9 @@
       transition: all 0.3s ease;
       text-transform: lowercase;
       letter-spacing: -0.5px;
+      .logo_text_highlight{
+              color: var(  --logo-text-highlight) !important;
+          }
     }
     
     .logo-tagline {
@@ -442,6 +448,9 @@
     .logo-content {
       .logo-text {
         font-size: 1.2rem;
+        .logo_text_highlight{
+              color: var(  --logo-text-highlight) !important;
+          }
       }
       
       .logo-tagline {
@@ -535,6 +544,9 @@
     .logo-content {
       .logo-text {
         font-size: 1.1rem;
+        .logo_text_highlight{
+              color: var(  --logo-text-highlight) !important;
+          }
       }
       
       .logo-tagline {
