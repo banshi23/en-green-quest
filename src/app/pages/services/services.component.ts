@@ -76,17 +76,17 @@ export class ServicesComponent implements OnInit {
   certifications = [
     {
       name: 'Verra (VCS)',
-      logo: 'assets/partners/verra-vector-logo.webp',
+      logo: 'assets/images/partners/verra-vector-logo.webp',
       description: 'The world\'s most widely used voluntary GHG program with rigorous certification standards.'
     },
     {
       name: 'Gold Standard',
-      logo: 'assets/partners/Gold Standard Logo.svg',
+      logo: 'assets/images/partners/Gold Standard Logo.svg',
       description: 'Highest quality carbon offset projects with verified sustainable development benefits.'
     },
     {
       name: 'Clean Development Mechanism',
-      logo: 'assets/partners/unfcc.png',
+      logo: 'assets/images/partners/unfcc.png',
       description: 'UN framework mechanism for emission reduction projects in developing countries.'
     }
   ];

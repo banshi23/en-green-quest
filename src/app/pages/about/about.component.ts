@@ -48,25 +48,25 @@ export class AboutComponent implements OnInit, AfterViewInit {
       name: 'Dr. Priya Sharma',
       title: 'CEO & Founder',
       bio: 'Environmental scientist with 20+ years experience in carbon markets and sustainable development. Previously led carbon initiatives at major consulting firms.',
-      image: 'assets/images/team-1.jpg'
+      image: 'assets/images/teams/priya_sharma.png'
     },
     {
       name: 'Marcus Thompson',
       title: 'Chief Technology Officer',
       bio: 'Renewable energy expert with extensive experience in IREC certification and clean energy project development across emerging markets.',
-      image: 'assets/images/team-2.jpg'
+      image: 'assets/images/teams/marcus_thompson.png'
     },
     {
-      name: 'Fatima Al-Rashid',
+      name: 'Sateesh',
       title: 'Head of Community Projects',
       bio: 'International development specialist with deep expertise in community-based carbon initiatives and cookstove programs across Africa and Asia.',
-      image: 'assets/images/team-3.jpg'
+      image: 'assets/images/teams/sateesh.png'
     },
     {
-      name: 'Dr. James Chen',
+      name: 'Rakesh Mishra',
       title: 'Director of Nature-Based Solutions',
       bio: 'Forest ecologist and carbon sequestration researcher, bringing scientific rigor to our reforestation and biochar project development.',
-      image: 'assets/images/team-4.jpg'
+      image: 'assets/images/teams/rakesh_mishra.png'
     }
   ];
   
@@ -104,11 +104,11 @@ export class AboutComponent implements OnInit, AfterViewInit {
   ];
   
   partners = [
-    { name: 'Gold Standard', logo: 'assets/partners/Gold Standard Logo.svg' },
-    { name: 'Verra', logo: 'assets/partners/verra-vector-logo.webp' },
-    { name: 'International REC Standard', logo: 'assets/partners/iREC.png' },
-    { name: 'UN Global Compact', logo: 'assets/partners/UN_Global_Compact_logo.png' },
-    { name: 'Climate Action Reserve', logo: 'assets/partners/reserve-logo.png' }
+    { name: 'Gold Standard', logo: 'assets/images/partners/Gold Standard Logo.svg' },
+    { name: 'Verra', logo: 'assets/images/partners/verra-vector-logo.webp' },
+    { name: 'International REC Standard', logo: 'assets/images/partners/iREC.png' },
+    { name: 'UN Global Compact', logo: 'assets/images/partners/UN_Global_Compact_logo.png' },
+    { name: 'Climate Action Reserve', logo: 'assets/images/partners/reserve-logo.png' }
   ];
   
   constructor() {}
