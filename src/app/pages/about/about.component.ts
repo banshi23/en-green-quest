@@ -104,11 +104,11 @@ export class AboutComponent implements OnInit, AfterViewInit {
   ];
   
   partners = [
-    { name: 'Gold Standard', logo: 'assets/images/partner-1.png' },
-    { name: 'Verra', logo: 'assets/images/partner-2.png' },
-    { name: 'International REC Standard', logo: 'assets/images/partner-3.png' },
-    { name: 'UN Global Compact', logo: 'assets/images/partner-4.png' },
-    { name: 'Climate Action Reserve', logo: 'assets/images/partner-5.png' }
+    { name: 'Gold Standard', logo: 'assets/partners/Gold Standard Logo.svg' },
+    { name: 'Verra', logo: 'assets/partners/verra-vector-logo.webp' },
+    { name: 'International REC Standard', logo: 'assets/partners/iREC.png' },
+    { name: 'UN Global Compact', logo: 'assets/partners/UN_Global_Compact_logo.png' },
+    { name: 'Climate Action Reserve', logo: 'assets/partners/reserve-logo.png' }
   ];
   
   constructor() {}
