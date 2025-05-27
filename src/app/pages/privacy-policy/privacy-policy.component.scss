@@ -265,13 +265,14 @@
 
 @media (max-width: 576px) {
   .table-of-contents {
-    ul {
-      flex-direction: column;
+    // ul {
+    //   flex-direction: column;
       
-      li a {
-        text-align: center;
-      }
-    }
+    //   li a {
+    //     text-align: center;
+    //   }
+    // }
+    display: none;
   }
   
   .contact-info {
