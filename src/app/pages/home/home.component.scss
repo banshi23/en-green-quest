@@ -145,10 +145,16 @@
   padding: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   transition: all 0.3s;
-  
   &:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    h3 {
+      color: var(--primary-color);
+      
+      &::after {
+        transform: scaleX(1);
+      }
+    }
   }
   
   .feature-icon {
@@ -188,14 +194,6 @@
       transform: scaleX(0);
       transform-origin: left;
       transition: transform 0.3s ease;
-    }
-    
-    &:hover {
-      color: var(--primary-color);
-      
-      &::after {
-        transform: scaleX(1);
-      }
     }
   }
 
