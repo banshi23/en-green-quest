@@ -58,7 +58,7 @@ export class ContactComponent implements OnInit {
   faqs = [
     {
       question: 'How quickly will someone contact me after I submit this form?',
-      answer: 'We prioritize every inquiry and strive to respond within 24 hours, often much sooner. For urgent matters, please call our office directly at +1 (555) 123-4567.',
+      answer: 'We prioritize every inquiry and strive to respond within 24 hours, often much sooner. For urgent matters, please call our office directly at +91 7314022748.',
       open: true
     },
     {
