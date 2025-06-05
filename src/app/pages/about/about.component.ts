@@ -45,27 +45,39 @@ export class AboutComponent implements OnInit, AfterViewInit {
   
   team = [
     {
+      name: 'Shailesh Kumar Bokadia',
+      title: 'MD & Founder',
+      bio: 'Mr. Shailesh Kumar Bokadia is a seasoned entrepreneur with diversified expertise spanning sustainable real estate development, agricultural commodities, and equity markets. As a passionate environmental advocate, he actively champions nature conservation initiatives. Through Engreen Quest, he has channeled his commitment toward carbon project development, advancing the global transition to net-zero emissions.',
+      image: 'assets/images/teams/shailesh_bokadia.jpg'
+    },
+    {
       name: 'Dr. Priya Sharma',
-      title: 'CEO & Founder',
+      title: 'CEO & Co-Founder',
       bio: 'Environmental scientist with 20+ years experience in carbon markets and sustainable development. Previously led carbon initiatives at major consulting firms.',
       image: 'assets/images/teams/priya_sharma.png'
     },
     {
       name: 'Marcus Thompson',
-      title: 'Chief Technology Officer',
-      bio: 'Renewable energy expert with extensive experience in IREC certification and clean energy project development across emerging markets.',
+      title: 'CTO',
+      bio: 'Technology leader with extensive experience in digital platforms for environmental monitoring and carbon project management systems.',
       image: 'assets/images/teams/marcus_thompson.png'
     },
     {
-      name: 'Sateesh',
+      name: 'Sateesh Kumar',
       title: 'Head of Community Projects',
-      bio: 'International development specialist with deep expertise in community-based carbon initiatives and cookstove programs across Africa and Asia.',
+      bio: 'International development specialist with deep expertise in community-based carbon initiatives and clean cooking programs across Africa and Asia.',
       image: 'assets/images/teams/sateesh.png'
     },
     {
+      name: 'Dr. Amara Okafor',
+      title: 'Director of NBS',
+      bio: 'Forest ecologist and carbon sequestration researcher, bringing scientific rigor to our nature-based solutions and biochar project development.',
+      image: 'assets/images/teams/amara_okafor.png'
+    },
+    {
       name: 'Rakesh Mishra',
-      title: 'Director of Nature-Based Solutions',
-      bio: 'Forest ecologist and carbon sequestration researcher, bringing scientific rigor to our reforestation and biochar project development.',
+      title: 'Director of Renewable Energy Carbon Projects',
+      bio: 'Renewable energy expert with extensive experience in IREC certification and clean energy project development across emerging markets.',
       image: 'assets/images/teams/rakesh_mishra.png'
     }
   ];

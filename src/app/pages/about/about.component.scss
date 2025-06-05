@@ -66,28 +66,6 @@
   background-color: var(--section-alt-bg);
 }
 
-.section-header {
-  text-align: center;
-  margin-bottom: 3rem;
-  
-  h2 {
-    font-size: 2.25rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    
-    .highlight {
-      color: var(--primary-color);
-    }
-  }
-  
-  p {
-    font-size: 1.125rem;
-    max-width: 700px;
-    margin: 0 auto;
-    color: var(--text-secondary);
-  }
-}
-
 .focus-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -188,7 +166,7 @@
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
@@ -462,18 +440,6 @@
         }
       }
     }
-  }
-}
-
-// Animation classes
-.animate-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 

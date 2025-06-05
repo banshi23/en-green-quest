@@ -25,23 +25,23 @@ export class ServicesComponent implements OnInit {
       note: 'We align all NBS projects with verified carbon standards, ensuring transparency, accountability, and measurable climate impact.'
     },
     {
-      icon: 'fas fa-building',
-      title: 'Carbon Built Solutions (CBS)',
-      description: 'Carbon Built Solutions (CBS) focuses on decarbonizing the built environment through innovative techniques and low-carbon materials. We help clients achieve net-zero construction goals.',
+      icon: 'fas fa-home',
+      title: 'Community-Based Solutions (CBS)',
+      description: 'Community-Based Solutions (CBS) focuses on empowering marginalized rural communities through sustainable interventions. Our initiatives encompass clean cooking technologies, safe water access systems, and renewable energy adoption programs that improve livelihoods while generating measurable environmental benefits.',
       features: [
-        'Integrating carbon capture in construction processes',
-        'Utilizing carbon-negative materials (e.g., bio-concrete, green cement)',
-        'Implementing energy-efficient infrastructure designs',
-        'Enabling material circularity and lifecycle carbon accounting'
+        'Clean cooking stove programs for rural households',
+        'Safe water access and purification systems',
+        'Community-scale renewable energy installations',
+        'Capacity building and training programs'
       ],
-      note: 'Our CBS offerings combine engineering excellence with climate science to reshape urban sustainability.'
+      note: 'Our CBS projects prioritize community ownership and long-term sustainability, creating lasting positive impact beyond carbon reduction.'
     },
     {
       icon: 'fas fa-solar-panel',
       title: 'Renewable Energy (RE)',
-      description: 'Our Renewable Energy (RE) services empower organizations to switch to clean power sources while generating verifiable carbon credits. We support the development and registration of clean energy projects.',
+      description: 'Our Renewable Energy (RE) services empower organizations to switch to clean power sources while generating verifiable carbon credits. We support the development and registration of clean energy projects under verified carbon registries and IREC mechanism (International Renewable Energy Certification).',
       features: [
-        'Solar and wind farms',
+        'Solar and wind farms with IREC certification',
         'Biomass and biogas systems',
         'Small-scale hydroelectric projects',
         'Off-grid clean energy for rural communities'

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError, timeout } from 'rxjs/operators';
+import { catchError, timeout, map } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 
 export interface ContactFormData {
@@ -19,6 +19,26 @@ export interface ContactFormData {
   source: string;
 }
 
+// API Request Interface (matches your backend schema)
+export interface ContactAPIRequest {
+  full_name: string;
+  email: string;
+  company?: string;
+  phone?: string;
+  organization_type: string;
+  primary_interest: string;
+  subject: string;
+  message: string;
+  areas_of_interest: string[];
+  communications_optin: boolean;
+}
+
+// API Response Interface (matches your backend response)
+export interface ContactAPIResponse {
+  message: string;
+  id: number;
+}
+
 export interface ContactResponse {
   success: boolean;
   message: string;
@@ -30,8 +50,8 @@ export interface ContactResponse {
   providedIn: 'root'
 })
 export class ContactService {
-  private apiUrl = environment.apiUrl || 'https://api.engreenquest.com';
-  private contactEndpoint = `${this.apiUrl}/api/v1/contact`;
+  private apiUrl = 'http://82.112.236.173/api/engreenquest/v1';
+  private contactEndpoint = `${this.apiUrl}/contact`;
   
   private httpOptions = {
     headers: new HttpHeaders({
@@ -43,23 +63,62 @@ export class ContactService {
   constructor(private http: HttpClient) {}
   
   submitContactForm(formData: ContactFormData): Observable<ContactResponse> {
-    // Add honeypot field to prevent spam
-    const payload = {
-      ...formData,
-      honeypot: '', // Empty honeypot field
-      userAgent: navigator.userAgent,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      referrer: document.referrer || 'direct'
+    // Transform frontend form data to match API schema
+    const apiPayload: ContactAPIRequest = {
+      full_name: formData.name,
+      email: formData.email,
+      company: formData.company || undefined,
+      phone: formData.phone || undefined,
+      organization_type: this.mapOrganizationType(formData.organizationType),
+      primary_interest: this.mapPrimaryInterest(formData.projectType),
+      subject: formData.subject,
+      message: formData.message,
+      areas_of_interest: formData.interests.length > 0 ? formData.interests : ['general'],
+      communications_optin: formData.consent
     };
     
-    return this.http.post<ContactResponse>(
+    return this.http.post<ContactAPIResponse>(
       this.contactEndpoint, 
-      payload, 
+      apiPayload, 
       this.httpOptions
     ).pipe(
       timeout(30000), // 30 second timeout
-      catchError(this.handleError.bind(this))
+      catchError(this.handleError.bind(this)),
+      // Transform API response to match frontend expectations
+      map((apiResponse: ContactAPIResponse) => ({
+        success: true,
+        message: apiResponse.message,
+        id: apiResponse.id.toString(),
+        timestamp: new Date().toISOString()
+      }))
     );
+  }
+  
+  // Map frontend organization types to API values
+  private mapOrganizationType(frontendType: string): string {
+    const mapping: { [key: string]: string } = {
+      'corporation': 'corporation',
+      'small-business': 'small-business',
+      'ngo': 'ngo',
+      'government': 'government',
+      'investor': 'investor',
+      'other': 'other'
+    };
+    
+    return mapping[frontendType] || 'other';
+  }
+  
+  // Map frontend project types to API primary interest values
+  private mapPrimaryInterest(frontendType: string): string {
+    const mapping: { [key: string]: string } = {
+      'nature-based': 'nature-based',
+      'community-projects': 'community-projects',
+      'renewable-energy': 'renewable-energy',
+      'carbon-management': 'carbon-management',
+      'consultation': 'consultation'
+    };
+    
+    return mapping[frontendType] || 'consultation';
   }
   
   // Fallback method using a different endpoint or service
@@ -80,7 +139,7 @@ export class ContactService {
   // Method to validate email format on the server side
   validateEmail(email: string): Observable<{ valid: boolean; reason?: string }> {
     return this.http.post<{ valid: boolean; reason?: string }>(
-      `${this.apiUrl}/api/v1/validate-email`,
+      `${this.apiUrl}/validate-email`,
       { email },
       this.httpOptions
     ).pipe(
@@ -92,7 +151,7 @@ export class ContactService {
   // Method to get contact form configuration (for dynamic form fields)
   getContactFormConfig(): Observable<any> {
     return this.http.get<any>(
-      `${this.apiUrl}/api/v1/contact-config`,
+      `${this.apiUrl}/contact-config`,
       this.httpOptions
     ).pipe(
       timeout(10000),

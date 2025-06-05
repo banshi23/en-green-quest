@@ -58,32 +58,32 @@ export class ContactComponent implements OnInit {
   faqs = [
     {
       question: 'How quickly will someone contact me after I submit this form?',
-      answer: 'As a new company launching in 2025, we prioritize every inquiry. We strive to respond within 24 hours and often much sooner. For urgent matters, please call our office directly at +1 (555) 123-4567.',
+      answer: 'We prioritize every inquiry and strive to respond within 24 hours, often much sooner. For urgent matters, please call our office directly at +1 (555) 123-4567.',
       open: true
     },
     {
       question: 'What information should I prepare for an initial consultation?',
-      answer: 'For the best consultation, please prepare information about your organization\'s size, current sustainability initiatives, and specific goals. If you\'re interested in carbon projects, details about your target impact and budget range are helpful for our initial planning.',
+      answer: 'For the best consultation, please prepare information about your organization\'s size, current sustainability initiatives, and specific goals. If you\'re interested in carbon projects, details about your target impact and budget range are helpful for our initial planning. However, there are specific information required for individual project needs, hence it is advised to contact and ask for the information required to conduct an initial feasibility assessment.',
       open: false
     },
     {
       question: 'Do you work with small businesses and NGOs?',
-      answer: 'Absolutely! As we launch Engreen Quest, we\'re excited to work with organizations of all sizes. Our solutions are designed to be scalable from small businesses to large corporations, NGOs, and government agencies.',
+      answer: 'Absolutely! We work with organizations of all sizes. Our solutions are designed to be scalable from small businesses to large corporations, NGOs, and government agencies.',
       open: false
     },
     {
-      question: 'What types of carbon projects are you launching with?',
-      answer: 'We\'re starting with three main focus areas: Nature-Based Solutions (reforestation, sustainable agriculture), Community-Centric Projects (clean cookstoves, rural energy), and Renewable Energy projects with IREC certification. All projects will meet international verification standards from day one.',
+      question: 'What types of carbon projects do you offer?',
+      answer: 'We focus on three main areas: Nature-Based Solutions (reforestation, sustainable agriculture), Community-Based Solutions (clean cooking, clean water, clean energy adoption by marginalized rural communities), and Renewable Energy projects with IREC certification. All projects meet rigorous international verification standards.',
       open: false
     },
     {
-      question: 'How do you ensure quality as a new company?',
-      answer: 'While Engreen Quest is new, our team brings decades of combined experience from leading sustainability firms. We\'re partnering with established verification bodies including Gold Standard and Verra, ensuring all projects meet the highest international standards from launch.',
+      question: 'How do you ensure quality in your projects?',
+      answer: 'Our team brings decades of combined experience from leading sustainability firms. We partner with established verification bodies including Gold Standard and Verra, ensuring all projects meet the highest international standards with complete transparency in our project development and monitoring processes.',
       open: false
     },
     {
-      question: 'What are the typical timelines for your initial projects?',
-      answer: 'As we launch in 2025, our first community cookstove programs are planned for Q3, with reforestation projects beginning in Q4. We provide detailed timelines during consultations and will be transparent about our launch schedule and capacity.',
+      question: 'What are the typical timelines for carbon projects?',
+      answer: 'Project timelines vary depending on type and scale. Community-based projects typically take 6-12 months from inception to implementation, while nature-based solutions may require 12-24 months. We provide detailed timelines during consultations and maintain transparent communication throughout the project lifecycle.',
       open: false
     }
   ];
@@ -177,6 +177,7 @@ export class ContactComponent implements OnInit {
   }
   
   private handleError(error: any) {
+    console.log(error);
     this.submitting = false;
     this.submitResult = true;
     this.submitSuccess = false;

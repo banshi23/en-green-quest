@@ -17,6 +17,11 @@ export const routes: Routes = [
     title: 'En Green Quest - Our Services'
   },
   {
+    path: 'projects',
+    loadComponent: () => import('./pages/projects/projects.component').then(m => m.ProjectsComponent),
+    title: 'En Green Quest - Our Projects'
+  },
+  {
     path: 'contact',
     loadComponent: () => import('./pages/contact/contact.component').then(m => m.ContactComponent),
     title: 'En Green Quest - Contact Us'

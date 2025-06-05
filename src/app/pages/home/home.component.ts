@@ -20,12 +20,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
     {
       icon: 'fas fa-home',
       title: 'Community Impact',
-      description: 'Clean cookstove programs that improve health outcomes while reducing emissions and preserving forests.'
+      description: 'Community projects like clean cooking, clean water, clean electricity that generate carbon credits alongside health & lifestyle benefits to the community.'
     },
     {
       icon: 'fas fa-bolt',
       title: 'Renewable Energy',
-      description: 'Clean energy projects with IREC certification, enabling verified renewable energy claims for your organization.'
+      description: 'Renewable energy projects for carbon benefits under verified carbon registries and IREC mechanism (International Renewable Energy Certification).'
     },
     {
       icon: 'fas fa-chart-line',
@@ -45,10 +45,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ];
   
   stats = [
-    { value: '50+', label: 'Active Projects' },
-    { value: '25+', label: 'Countries Served' },
-    { value: '1.5M+', label: 'Tons CO₂ Sequestered' },
-    { value: '100K+', label: 'Communities Impacted' }
+    { value: '30', label: 'Projects Finalized' },
+    { value: '5', label: 'Countries Ongoing Projects' },
+    { value: '1M', label: 'Tons CO₂ Sequestration Potential' },
+    { value: '100K', label: 'People Positive Impact' }
   ];
   
   process = [
