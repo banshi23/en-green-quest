@@ -106,7 +106,7 @@ export class ContactComponent implements OnInit {
       organizationType: ['', Validators.required],
       projectType: ['', Validators.required],
       subject: ['', [Validators.required, Validators.minLength(5)]],
-      message: ['', [Validators.required, Validators.minLength(20), Validators.maxLength(2000)]],
+      message: ['', [Validators.required, Validators.minLength(30), Validators.maxLength(2000)]],
       consent: [false, Validators.requiredTrue]
     });
   }
@@ -146,11 +146,10 @@ export class ContactComponent implements OnInit {
       timestamp: new Date().toISOString(),
       source: 'website_contact_form'
     };
-    
     // Call the contact service
     this.contactService.submitContactForm(formData).subscribe({
       next: (response) => {
-        this.handleSuccess(response);
+        this.handleSuccess(response.message);
       },
       error: (error) => {
         this.handleError(error);
@@ -158,11 +157,11 @@ export class ContactComponent implements OnInit {
     });
   }
   
-  private handleSuccess(response: any) {
+  private handleSuccess(message: string) {
     this.submitting = false;
     this.submitResult = true;
     this.submitSuccess = true;
-    this.submitMessage = 'Thank you for your message! Our carbon solutions team will contact you within 24 hours to discuss your sustainability goals.';
+    this.submitMessage = message;
     
     // Reset form
     this.resetForm();
@@ -177,7 +176,6 @@ export class ContactComponent implements OnInit {
   }
   
   private handleError(error: any) {
-    console.log(error);
     this.submitting = false;
     this.submitResult = true;
     this.submitSuccess = false;

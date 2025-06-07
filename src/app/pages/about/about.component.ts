@@ -72,7 +72,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
       name: 'Dr. Amara Okafor',
       title: 'Director of NBS',
       bio: 'Forest ecologist and carbon sequestration researcher, bringing scientific rigor to our nature-based solutions and biochar project development.',
-      image: 'assets/images/teams/amara_okafor.png'
+      image: 'assets/images/teams/amara_okafor.jpg'
     },
     {
       name: 'Rakesh Mishra',

@@ -76,7 +76,6 @@ export class ContactService {
       areas_of_interest: formData.interests.length > 0 ? formData.interests : ['general'],
       communications_optin: formData.consent
     };
-    
     return this.http.post<ContactAPIResponse>(
       this.contactEndpoint, 
       apiPayload, 
