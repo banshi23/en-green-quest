@@ -159,6 +159,7 @@ export class ContactService {
   }
   
   private handleError(error: any): Observable<never> {
+    console.log(error);
     let errorMessage = 'An unexpected error occurred';
     let errorCode = 'UNKNOWN_ERROR';
     
