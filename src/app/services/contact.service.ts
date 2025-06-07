@@ -50,8 +50,7 @@ export interface ContactResponse {
   providedIn: 'root'
 })
 export class ContactService {
-  private apiUrl = 'http://82.112.236.173/api/engreenquest/v1';
-  private contactEndpoint = `${this.apiUrl}/contact`;
+  private contactEndpoint = `${environment.apiUrl}/contact`;
   
   private httpOptions = {
     headers: new HttpHeaders({
@@ -138,7 +137,7 @@ export class ContactService {
   // Method to validate email format on the server side
   validateEmail(email: string): Observable<{ valid: boolean; reason?: string }> {
     return this.http.post<{ valid: boolean; reason?: string }>(
-      `${this.apiUrl}/validate-email`,
+      `${environment.apiUrl}/validate-email`,
       { email },
       this.httpOptions
     ).pipe(
@@ -150,7 +149,7 @@ export class ContactService {
   // Method to get contact form configuration (for dynamic form fields)
   getContactFormConfig(): Observable<any> {
     return this.http.get<any>(
-      `${this.apiUrl}/contact-config`,
+      `${environment.apiUrl}/contact-config`,
       this.httpOptions
     ).pipe(
       timeout(10000),

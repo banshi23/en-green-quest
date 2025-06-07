@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/api/*"
+  to = "http://82.112.236.173/api/engreenquest/v1/:splat"
+  status = 200
+  force = true
