@@ -241,7 +241,7 @@
             </button>
           </div>
           
-          <div  class="form-result form-group full-width">
+          <div *ngIf="submitResult" class="form-result form-group full-width">
             <div class="alert" [ngClass]="{'success': submitSuccess, 'error': !submitSuccess}">
               <i *ngIf="submitSuccess" class="fas fa-check-circle"></i>
               <i *ngIf="!submitSuccess" class="fas fa-exclamation-triangle"></i>
