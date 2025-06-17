@@ -46,13 +46,13 @@ export class AboutComponent implements OnInit, AfterViewInit {
   team = [
     {
       name: 'Shailesh Kumar Bokadia',
-      title: 'MD & Founder',
+      title: 'Co-founder & MD',
       bio: 'Mr. Shailesh Kumar Bokadia is a seasoned entrepreneur with diversified expertise spanning sustainable real estate development, agricultural commodities, and equity markets. As a passionate environmental advocate, he actively champions nature conservation initiatives. Through Engreen Quest, he has channeled his commitment toward carbon project development, advancing the global transition to net-zero emissions.',
       image: 'assets/images/teams/shailesh_bokadia.jpg'
     },
     {
       name: 'Dr. Priya Sharma',
-      title: 'CEO & Co-Founder',
+      title: 'Co-founder & CEO',
       bio: 'Environmental scientist with 20+ years experience in carbon markets and sustainable development. Previously led carbon initiatives at major consulting firms.',
       image: 'assets/images/teams/priya_sharma.png'
     },
@@ -64,7 +64,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
     },
     {
       name: 'Sateesh Kumar',
-      title: 'Head of Community Projects',
+      title: 'Co-founder & Head of Community Projects',
       bio: 'International development specialist with deep expertise in community-based carbon initiatives and clean cooking programs across Africa and Asia.',
       image: 'assets/images/teams/sateesh.png'
     },
@@ -78,7 +78,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
       name: 'Rakesh Mishra',
       title: 'Director of Renewable Energy Carbon Projects',
       bio: 'Renewable energy expert with extensive experience in IREC certification and clean energy project development across emerging markets.',
-      image: 'assets/images/teams/rakesh_mishra.png'
+      image: 'assets/images/teams/rakesh_mishra.jpg'
     }
   ];
   
